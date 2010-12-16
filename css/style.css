@@ -1,0 +1,40 @@
+
+#wrapper{
+width:100%;
+margin:0 auto;
+height:300px
+
+}
+
+#header{
+height:80px;
+width:100%;
+background-color:#B9B9B9;
+color:#001234;
+}
+
+#navigation{
+width:15%;
+height:400px;
+border-right:2px solid white;
+background-color:#F1F1F1;
+float:left;
+}
+
+#inner-body{
+padding:5px;
+
+}
+#course-selector{
+text-align:center;
+}
+.bold{
+font-weight:bold;
+}
+.list tr td{
+border:1px solid black;
+}
+table{
+text-align:center;
+margin:0 auto;
+}
