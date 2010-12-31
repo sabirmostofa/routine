@@ -2,12 +2,12 @@
 #wrapper{
 width:100%;
 margin:0 auto;
-height:300px
-
+height:550px;
+background-color:#B9F1F1;
 }
 
 #header{
-height:80px;
+height:100px;
 width:100%;
 background-color:#B9B9B9;
 color:#001234;
@@ -15,7 +15,7 @@ color:#001234;
 
 #navigation{
 width:15%;
-height:400px;
+height:450px;
 border-right:2px solid white;
 background-color:#F1F1F1;
 float:left;
