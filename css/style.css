@@ -38,3 +38,21 @@ table{
 text-align:center;
 margin:0 auto;
 }
+
+
+#login{ 
+text-align:center;
+}
+
+.headLine{
+font-size:20px;
+text-align:center;
+}
+.message{
+text-align:center;
+}
+.logout{
+float:right;
+
+}
+

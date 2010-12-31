@@ -2,6 +2,7 @@
 require_once('connect.php');
 if(!$connected)echo 'connection problem';
 
+// fetching all courses and creating a table
 function all_courses($semester){
 	$query=mysql_query('SELECT * FROM courses WHERE semester='.$semester);
 	echo '<h2>Course List for '.$semester.'</h2>';
@@ -29,11 +30,13 @@ function all_courses($semester){
 	function all_semesters($var){
 		if(isset($var['form-course']))all_courses($var['selector']);		
 		}
-		
-		
+				
+		// populating the relation table
 	function teacher_course($post){
+	$link=mysql_query('SELECT * FROM courses') or die(mysql_error());
+	$rows=mysql_num_rows($link);
 	if(isset($post['teacher']))	
-	for($i=0;$i<100;$i++):
+	for($i=0;$i<$rows;$i++):
 	if(isset($post[$i])):	
 	$query=mysql_query("SELECT * FROM teachers WHERE name='$post[$i]'");
 	while($res_array=mysql_fetch_assoc($query)):
@@ -48,3 +51,27 @@ function all_courses($semester){
 	endif;	
 	endfor;				
 			}
+			
+//checks if data exists in table			
+function in_table($column,$table,$data){
+$result = mysql_query("SELECT $column FROM $table") or die(mysql_error());
+$trigger=0;
+while($row=mysql_fetch_array($result,MYSQL_ASSOC)){
+if(in_array($data,$row))$trigger=1;
+}
+if($trigger==0)return 0;
+else return 1;
+}
+
+//checks if the password is ok
+function valid_pass($name,$pass){
+	try{
+	$result=mysql_query("SELECT user_pass FROM users WHERE username='$name'");
+	$passArray=mysql_fetch_assoc($result);
+}catch(Exception $e){
+	
+	}
+	if($pass==$passArray['user_pass'])  return true;
+	else return false;	
+	
+	}

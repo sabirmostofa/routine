@@ -1,28 +1,19 @@
-<?php require_once('library/functions.php');
+<?php
+include('auth.php');
+include('header.php');
+
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<head>
-	<title>Routine</title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<link rel='stylesheet' href="css/style.css"/>
-<script src="js/jquery-1.4.4.js" type="text/javascript"></script>
-<script src="js/custom.js" type="text/javascript"></script>
-</head>
-
-<body>
-<div id='wrapper'>
-<div id='header'>
-
-</div>
 
 <div id='navigation'>
 </div>
 
 <div id='inner-body'>
+<div class='logout'>
+<form action='logout.php' method='post'>
+<input type='submit' name='logout' value='logout'/>
+
+</form>
+</div>
 <div id='course-selector'>
 
 <form action="" method='post'>
@@ -51,12 +42,12 @@ teacher_course($_POST);
 
 </div><!-- inner body-->
 
-
 <div id='footer'>
 </div>
 
+<?php
+include('footer.php');
+?>
 
-</div><!-- end wrapper-->
-	
-</body>
-</html>
+
+

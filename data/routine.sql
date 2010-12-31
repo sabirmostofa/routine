@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 16, 2010 at 08:53 PM
+-- Generation Time: Dec 31, 2010 at 08:18 PM
 -- Server version: 5.1.37
 -- PHP Version: 5.3.0
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `course_teacher` (
   `teacher_id` int(4) NOT NULL,
   `course_id` int(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `course_teacher`
@@ -67,7 +67,9 @@ CREATE TABLE IF NOT EXISTS `course_teacher` (
 INSERT INTO `course_teacher` (`id`, `teacher_id`, `course_id`) VALUES
 (2, 1, 4),
 (3, 3, 7),
-(4, 2, 8);
+(4, 2, 8),
+(5, 1, 8),
+(6, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -92,3 +94,23 @@ INSERT INTO `teachers` (`id`, `name`, `initial`, `email`, `cell`) VALUES
 (1, 'shafi', 'sh', NULL, NULL),
 (2, 'einstein', 'es', NULL, NULL),
 (3, 'gauss', 'gs', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(64) NOT NULL,
+  `user_pass` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `user_pass`) VALUES
+(1, 'admin', 'rout');
