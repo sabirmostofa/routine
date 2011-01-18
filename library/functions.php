@@ -8,15 +8,21 @@ function all_courses($semester){
 	echo '<h2>Course List for '.$semester.'</h2>';
 	echo '<form action="" method="post"><table class="list">';
 	echo '<tr class="bold"><td>Course Title</td><td>Course ID</td><td>Teacher Name</td></tr>';
-		  
+		  $varCounter=0;
 	while($result_array=mysql_fetch_assoc($query)):
 		echo '<tr>';
+		
 	foreach(array_reverse($result_array) as $key=>$value):
 	    if($key=='course_id'||$key=='name'):
 		echo '<td>'.$value.'</td>';
 		
 		elseif($key=='id'):
 		echo '<td><input type="text" name='.$value.'></input></td>';
+		echo '<td><input type=\'button\' value =\'more\' class=\'more\'/></td>';
+			for($i=0;$i<3;$i++):
+			echo '<tr><td></td><td></td><td><input type="text" class='. '\'xtra' . $varCounter++ . '\'' . ' name='.$value.'></input></td></tr>';
+			endfor;		
+		
 		endif;
 		endforeach;	
 		echo '</tr>';

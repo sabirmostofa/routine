@@ -18,4 +18,10 @@ require_once('library/functions.php');
 <div id='wrapper'>
 <div id='header'>
 
+<ul id='topNav'>
+<li><a href='' >Home</a></li>
+<li><a href='' >More info</a></li>
+<li><a href='' >About us</a></li>
+</ul>
+
 </div>

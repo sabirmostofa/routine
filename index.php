@@ -5,6 +5,11 @@ include('header.php');
 ?>
 
 <div id='navigation'>
+<ul id='navigate'>
+<li> <a href='teachers.php'>Teachers Panel</a></li>
+<li></li>
+<li></li>
+</ul>
 </div>
 
 <div id='inner-body'>

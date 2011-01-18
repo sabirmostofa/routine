@@ -21,6 +21,14 @@ background-color:#F1F1F1;
 float:left;
 }
 
+#navigate{
+list-style:none;
+text-align:left;
+}
+#navigate li{
+list-style:none;
+}
+
 #inner-body{
 padding:5px;
 
@@ -53,6 +61,40 @@ text-align:center;
 }
 .logout{
 float:right;
+
+}
+
+#header{
+text-align:center;
+margin:10px auto;
+}
+
+#topNav{
+text-align:center;
+list-style:none;
+width:400px;
+margin:20px auto;
+}
+
+#topNav li{
+
+float:left;
+margin:70px 0 0 20px ;
+
+
+}
+
+#topNav li a{
+display:block;
+float:left;
+text-decoration:none;
+
+
+}
+
+#topNav li a:hover{
+color:white;
+
 
 }
 
