@@ -2,8 +2,9 @@
 #wrapper{
 width:100%;
 margin:0 auto;
-height:550px;
+height:800px;
 background-color:#B9F1F1;
+width:940px;
 }
 
 #header{
@@ -98,11 +99,17 @@ color:white;
 
 }
 #prefTable{
-width:700px;
-margin:30px auto;
+width:890px;
+
 }
 
 #prefTable tr td{
 border:1px solid black;
-padding:4px;
+padding:2px;
+}
+
+#tabHolder{
+width:900px;
+margin:5px;
+overflow:hidden;
 }

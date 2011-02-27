@@ -22,6 +22,7 @@ require_once('library/functions.php');
 <li><a href='' >Home</a></li>
 <li><a href='' >More info</a></li>
 <li><a href='' >About us</a></li>
+<li><a href='preference.php' >Preference</a></li>
 </ul>
 
 </div>
