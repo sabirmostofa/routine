@@ -97,4 +97,12 @@ color:white;
 
 
 }
+#prefTable{
+width:700px;
+margin:30px auto;
+}
 
+#prefTable tr td{
+border:1px solid black;
+padding:4px;
+}
